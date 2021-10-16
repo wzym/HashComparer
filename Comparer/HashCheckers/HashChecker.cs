@@ -8,7 +8,7 @@ namespace HashComparer
     {
         private readonly string _comparedHash;
         private readonly IFilesListCreator _filesListCreator;
-        protected abstract HashAlgorithm Algorithm { get; }
+        protected abstract HashAlgorithm Algorithm { get; }        
 
         protected HashChecker(IArgsStorage argsStorage, IFilesListCreator filesListCreator)
         {

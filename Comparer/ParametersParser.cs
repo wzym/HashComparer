@@ -49,9 +49,9 @@ namespace HashComparer
             {
                 return preparedStringRepresentation switch
                 {
-                    "sha1" => SupportedHashAlgorithms.Sha1,
-                    "sha256" => SupportedHashAlgorithms.Sha256,
-                    "sha512" => SupportedHashAlgorithms.Sha512,
+                    Sha1HashChecker.NameRepresentation => SupportedHashAlgorithms.Sha1,
+                    Sha256HashChecker.NameRepresentation => SupportedHashAlgorithms.Sha256,
+                    Sha512HashChecker.NameRepresentation => SupportedHashAlgorithms.Sha512,
                     _ => SupportedHashAlgorithms.NotDefined
                 };
             }

@@ -26,7 +26,7 @@ namespace HashComparer
                 try
                 {
                     var currentHash = GetCheckedHash(file);
-                    if(string.Compare(currentHash, _comparedHash, StringComparison.Ordinal) == 0)
+                    if(string.Compare(currentHash, _comparedHash, StringComparison.InvariantCultureIgnoreCase) == 0)
                         result.Add(file);
                 }
                 catch (Exception)

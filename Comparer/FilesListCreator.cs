@@ -16,7 +16,7 @@ namespace HashComparer
             if (File.Exists(_argsStorage.StartPath))//TODO check while the parameters are parsed
                 return new[] {new FileInfo(_argsStorage.StartPath)};
             
-            var files = Directory.GetFiles(_argsStorage.StartPath, "*.*", SearchOption.AllDirectories)
+            var files = Directory.GetFiles(_argsStorage.StartPath, "*.*", SearchOption.TopDirectoryOnly)
                 .Select(p => new FileInfo(p))
                 .ToArray();
 
